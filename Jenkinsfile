@@ -19,15 +19,17 @@ parameters {
             steps { 
                 script {
                     if ( env.ENVIRONMENT == 'QA' ){
-        	sh 'cp target/GRRAS.war /home/rutuja/Documents/Devops-Softwares/apache-tomcat-9.0.89/webapps'
+        	sh '''cp target/GRRAS.war /home/rutuja/Documents/Devops-Softwares/apache-tomcat-9.0.89/webapps
+'''
         	echo "deployment has been done on QA!"
 			 }
 			else ( env.ENVIRONMENT == 'UAT' ){
-            sh 'cp target/GRRAS.war /home/rutuja/Documents/Devops-Softwares/apache-tomcat-9.0.89/webapps'
+                sh '''cp target/GRRAS.war /home/rutuja/Documents/Devops-Softwares/apache-tomcat-9.0.89/webapps
+'''
     		echo "deployment has been done on UAT!"
 			}
 			echo "deployment has been done!"
-			fi
+			
                 }
         }}  
     }
