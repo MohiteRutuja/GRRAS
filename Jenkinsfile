@@ -2,7 +2,7 @@ pipeline {
     agent any
     
 parameters {
-  choice choices: ['QA', 'UAT'], description: 'ENVIRONMENT Values', name: 'ENVIRONMENT'
+  string defaultValue: 'DEV', description: 'ENVIRONMENT Values', name: 'ENVIRONMENT'
 }
  
     stages {
