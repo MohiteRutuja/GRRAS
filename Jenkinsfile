@@ -13,7 +13,7 @@ pipeline {
             }}
           stage('Deployment'){
             steps { 
-                sh '''cp target/GRRAS.war home/rutuja/Documents/Devops-Softwares/apache-tomcat-9.0.89/webapps
+                sh '''cp target/GRRAS.war /home/rutuja/Documents/Devops-Softwares/apache-tomcat-9.0.89/webapps
 '''	
                 }}
 	 stage('Slack-Notification'){
